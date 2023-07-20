@@ -1,0 +1,10 @@
+{
+  "entity": "minecraft:creeper",
+  "targets": [
+    {
+	  "priority": 2,
+	  "check_sight": true,
+	  "entity": "minecraft:sheep"
+    }
+  ]
+}

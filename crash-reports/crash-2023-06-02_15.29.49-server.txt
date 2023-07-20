@@ -1,0 +1,762 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  CustomMobTargetsCoremod (CustomMobTargets-1.12.2-12.1.0.jar)
+  LoadingPlugin (ChunkAnimator-1.12.2-1.2.1.jar)
+  Aqua Acrobatics Transformer (AquaAcrobatics-1.15.3.jar)
+  OTGCorePlugin (OTG-Core.jar)
+  Quark Plugin (Quark-r1.6-179.jar)
+  LoadingPlugin (Bloodmoon-MC1.12.2-1.5.3.jar)
+  ChunkGenLimiterCoremod (chunkgenlimiter-1.1-core.jar)
+  XaeroMinimapPlugin (Xaeros_Minimap_23.4.2_Forge_1.12.jar)
+  IvToolkit (IvToolkit-1.3.3-1.12.jar)
+  MixinBooter (!mixinbooter-7.1.jar)
+  TransformLoader (DynamicSurroundings-1.12.2-3.6.1.0.jar)
+  ModularUI-Core (modularui-2.0.4.jar)
+  RBLoadingPlugin (RealBench-1.12.2-1.3.3.jar)
+  Do not report to Forge! (If you haven't disabled the FoamFix coremod, try disabling it in the config! Note that this bit of text will still appear.) (foamfix-0.10.15-1.12.2.jar)
+  SoManyEnchantments ASM (SoManyEnchantments-0.5.5.jar)
+  ForgelinPlugin (Forgelin-1.8.4.jar)
+  FutureMC (future-mc-0.2.11.jar)
+  MixinLoader (water-erosion-1.12.2-forge-1.1.1-beta1-full.jar)
+  BogoSorter-Core (bogosorter-1.2.7.jar)
+  FarseekCoreMod (Farseek-1.12-2.5.1.jar)
+  Born in a Barn (Born In A Barn V1.8-1.12-1.1.jar)
+  BNBGamingCore (BNBGamingCore-1.12.2-0.12.0.jar)
+  HCASM (HammerLib-1.12.2-2.0.6.32.jar)
+  BetterFoliageLoader (BetterFoliage-MC1.12-2.3.3.jar)
+  LoadingPlugin (HardcoreBuoy-1.12-1.1.0.jar)
+Contact their authors BEFORE contacting forge
+
+// Who set us up the TNT?
+
+Time: 6/2/23 3:29 PM
+Description: Watching Server
+
+java.lang.Error: ServerHangWatchdog detected that a single server tick took 60.00 seconds (should be max 0.05)
+	at com.google.common.collect.HashBiMap.seekByValue(HashBiMap.java:235)
+	at com.google.common.collect.HashBiMap.access$400(HashBiMap.java:58)
+	at com.google.common.collect.HashBiMap$Inverse.get(HashBiMap.java:573)
+	at net.minecraftforge.registries.ForgeRegistry.getID(ForgeRegistry.java:240)
+	at net.minecraftforge.registries.NamespacedWrapper.getIDForObject(NamespacedWrapper.java:95)
+	at net.minecraftforge.registries.NamespacedWrapper.func_148757_b(NamespacedWrapper.java:38)
+	at net.minecraft.world.biome.Biome.func_185362_a(Biome.java:115)
+	at net.minecraft.world.gen.layer.GenLayerBiomeEdge.func_75904_a(SourceFile:24)
+	at net.minecraft.world.gen.layer.GenLayerHills.func_75904_a(SourceFile:20)
+	at net.minecraft.world.gen.layer.GenLayerRareBiome.func_75904_a(SourceFile:14)
+	at net.minecraft.world.gen.layer.GenLayerZoom.func_75904_a(SourceFile:19)
+	at net.minecraft.world.gen.layer.GenLayerAddIsland.func_75904_a(SourceFile:15)
+	at net.minecraft.world.gen.layer.GenLayerZoom.func_75904_a(SourceFile:19)
+	at net.minecraft.world.gen.layer.GenLayerShore.func_75904_a(SourceFile:16)
+	at net.minecraft.world.gen.layer.GenLayerZoom.func_75904_a(SourceFile:19)
+	at net.minecraft.world.gen.layer.GenLayerZoom.func_75904_a(SourceFile:19)
+	at net.minecraft.world.gen.layer.GenLayerSmooth.func_75904_a(SourceFile:15)
+	at net.minecraft.world.gen.layer.GenLayerRiverMix.func_75904_a(SourceFile:25)
+	at net.minecraft.world.gen.layer.GenLayerVoronoiZoom.func_75904_a(SourceFile:22)
+	at net.minecraft.world.biome.BiomeProvider.func_76931_a(BiomeProvider.java:128)
+	at net.minecraft.world.biome.BiomeCache$Block.<init>(SourceFile:27)
+	at net.minecraft.world.biome.BiomeCache.func_76840_a(SourceFile:48)
+	at net.minecraft.world.biome.BiomeCache.func_180284_a(SourceFile:57)
+	at net.minecraft.world.biome.BiomeProvider.func_180300_a(BiomeProvider.java:65)
+	at net.minecraft.world.World.getBiomeForCoordsBody(World.java:178)
+	at net.minecraft.world.WorldProvider.getBiomeForCoords(WorldProvider.java:429)
+	at net.minecraft.world.World.func_180494_b(World.java:149)
+	at com.yungnickyoung.minecraft.bettermineshafts.world.MapGenBetterMineshaft.func_75047_a(MapGenBetterMineshaft.java:23)
+	at net.minecraft.world.gen.structure.MapGenMineshaft.func_180706_b(SourceFile:57)
+	at net.minecraft.world.gen.ChunkGeneratorOverworld.func_180513_a(ChunkGeneratorOverworld.java:585)
+	at net.minecraft.world.gen.ChunkProviderServer.func_180513_a(ChunkProviderServer.java:305)
+	at com.github.fnar.minecraft.WorldEditor1_12.findNearestStructure(WorldEditor1_12.java:302)
+	at greymerk.roguelike.dungeon.Dungeon.hasStructureTooCloseBy(Dungeon.java:200)
+	at greymerk.roguelike.dungeon.Dungeon.lambda$canGenerateDungeonHere$5(Dungeon.java:182)
+	at greymerk.roguelike.dungeon.Dungeon$$Lambda$1958/1515424807.test(Unknown Source)
+	at java.util.stream.MatchOps$1MatchSink.accept(Unknown Source)
+	at java.util.HashMap$KeySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(Unknown Source)
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.anyMatch(Unknown Source)
+	at greymerk.roguelike.dungeon.Dungeon.canGenerateDungeonHere(Dungeon.java:184)
+	at greymerk.roguelike.dungeon.Dungeon$$Lambda$1957/1716557973.test(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.stream.IntPipeline$4$1.accept(Unknown Source)
+	at java.util.stream.Streams$RangeIntSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.IntPipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at greymerk.roguelike.dungeon.Dungeon.selectLocation(Dungeon.java:165)
+	at greymerk.roguelike.dungeon.Dungeon.spawnInChunk(Dungeon.java:152)
+	at com.github.fnar.roguelike.worldgen.DungeonGenerator1_12.generate(DungeonGenerator1_12.java:21)
+	at net.minecraftforge.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:167)
+	at net.minecraft.world.chunk.Chunk.func_186034_a(Chunk.java:1020)
+	at net.minecraft.world.chunk.Chunk.func_186030_a(Chunk.java:980)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186025_d(ChunkProviderServer.java:157)
+	at net.minecraft.server.management.PlayerChunkMapEntry.func_187268_a(PlayerChunkMapEntry.java:126)
+	at net.minecraft.server.management.PlayerChunkMap.func_72693_b(SourceFile:147)
+	at net.minecraft.world.WorldServer.func_72835_b(WorldServer.java:227)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:756)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Unknown Source)
+
+(MixinBooter) Mixins in Stacktrace:
+	net.minecraft.world.biome.Biome:
+		com.fuzs.aquaacrobatics.core.mixin.BiomeMixin (META-INF/mixins.aquaacrobatics.json)
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at com.google.common.collect.HashBiMap.seekByValue(HashBiMap.java:235)
+	at com.google.common.collect.HashBiMap.access$400(HashBiMap.java:58)
+	at com.google.common.collect.HashBiMap$Inverse.get(HashBiMap.java:573)
+	at net.minecraftforge.registries.ForgeRegistry.getID(ForgeRegistry.java:240)
+	at net.minecraftforge.registries.NamespacedWrapper.getIDForObject(NamespacedWrapper.java:95)
+	at net.minecraftforge.registries.NamespacedWrapper.func_148757_b(NamespacedWrapper.java:38)
+	at net.minecraft.world.biome.Biome.func_185362_a(Biome.java:115)
+	at net.minecraft.world.gen.layer.GenLayerBiomeEdge.func_75904_a(SourceFile:24)
+	at net.minecraft.world.gen.layer.GenLayerHills.func_75904_a(SourceFile:20)
+	at net.minecraft.world.gen.layer.GenLayerRareBiome.func_75904_a(SourceFile:14)
+	at net.minecraft.world.gen.layer.GenLayerZoom.func_75904_a(SourceFile:19)
+	at net.minecraft.world.gen.layer.GenLayerAddIsland.func_75904_a(SourceFile:15)
+	at net.minecraft.world.gen.layer.GenLayerZoom.func_75904_a(SourceFile:19)
+	at net.minecraft.world.gen.layer.GenLayerShore.func_75904_a(SourceFile:16)
+	at net.minecraft.world.gen.layer.GenLayerZoom.func_75904_a(SourceFile:19)
+	at net.minecraft.world.gen.layer.GenLayerZoom.func_75904_a(SourceFile:19)
+	at net.minecraft.world.gen.layer.GenLayerSmooth.func_75904_a(SourceFile:15)
+	at net.minecraft.world.gen.layer.GenLayerRiverMix.func_75904_a(SourceFile:25)
+	at net.minecraft.world.gen.layer.GenLayerVoronoiZoom.func_75904_a(SourceFile:22)
+	at net.minecraft.world.biome.BiomeProvider.func_76931_a(BiomeProvider.java:128)
+	at net.minecraft.world.biome.BiomeCache$Block.<init>(SourceFile:27)
+	at net.minecraft.world.biome.BiomeCache.func_76840_a(SourceFile:48)
+	at net.minecraft.world.biome.BiomeCache.func_180284_a(SourceFile:57)
+	at net.minecraft.world.biome.BiomeProvider.func_180300_a(BiomeProvider.java:65)
+	at net.minecraft.world.World.getBiomeForCoordsBody(World.java:178)
+	at net.minecraft.world.WorldProvider.getBiomeForCoords(WorldProvider.java:429)
+	at net.minecraft.world.World.func_180494_b(World.java:149)
+	at com.yungnickyoung.minecraft.bettermineshafts.world.MapGenBetterMineshaft.func_75047_a(MapGenBetterMineshaft.java:23)
+	at net.minecraft.world.gen.structure.MapGenMineshaft.func_180706_b(SourceFile:57)
+	at net.minecraft.world.gen.ChunkGeneratorOverworld.func_180513_a(ChunkGeneratorOverworld.java:585)
+	at net.minecraft.world.gen.ChunkProviderServer.func_180513_a(ChunkProviderServer.java:305)
+	at com.github.fnar.minecraft.WorldEditor1_12.findNearestStructure(WorldEditor1_12.java:302)
+	at greymerk.roguelike.dungeon.Dungeon.hasStructureTooCloseBy(Dungeon.java:200)
+	at greymerk.roguelike.dungeon.Dungeon.lambda$canGenerateDungeonHere$5(Dungeon.java:182)
+	at greymerk.roguelike.dungeon.Dungeon$$Lambda$1958/1515424807.test(Unknown Source)
+	at java.util.stream.MatchOps$1MatchSink.accept(Unknown Source)
+	at java.util.HashMap$KeySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(Unknown Source)
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.anyMatch(Unknown Source)
+	at greymerk.roguelike.dungeon.Dungeon.canGenerateDungeonHere(Dungeon.java:184)
+	at greymerk.roguelike.dungeon.Dungeon$$Lambda$1957/1716557973.test(Unknown Source)
+	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
+	at java.util.stream.IntPipeline$4$1.accept(Unknown Source)
+	at java.util.stream.Streams$RangeIntSpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.IntPipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at greymerk.roguelike.dungeon.Dungeon.selectLocation(Dungeon.java:165)
+	at greymerk.roguelike.dungeon.Dungeon.spawnInChunk(Dungeon.java:152)
+	at com.github.fnar.roguelike.worldgen.DungeonGenerator1_12.generate(DungeonGenerator1_12.java:21)
+	at net.minecraftforge.fml.common.registry.GameRegistry.generateWorld(GameRegistry.java:167)
+	at net.minecraft.world.chunk.Chunk.func_186034_a(Chunk.java:1020)
+	at net.minecraft.world.chunk.Chunk.func_186030_a(Chunk.java:980)
+	at net.minecraft.world.gen.ChunkProviderServer.func_186025_d(ChunkProviderServer.java:157)
+	at net.minecraft.server.management.PlayerChunkMapEntry.func_187268_a(PlayerChunkMapEntry.java:126)
+	at net.minecraft.server.management.PlayerChunkMap.func_72693_b(SourceFile:147)
+	at net.minecraft.world.WorldServer.func_72835_b(WorldServer.java:227)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:756)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+
+-- Thread Dump --
+Details:
+	Threads: "Chunk I/O Executor Thread-1" Id=121 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4b26876a
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4b26876a
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #9" Id=120 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@45e1707e
+	-  locked java.util.Collections$UnmodifiableSet@41deec1a
+	-  locked sun.nio.ch.WindowsSelectorImpl@4dc7a45
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Netty Server IO #8" Id=119 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@7bbea063
+	-  locked java.util.Collections$UnmodifiableSet@35125dea
+	-  locked sun.nio.ch.WindowsSelectorImpl@39ad96e
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Netty Server IO #7" Id=116 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@64f3850a
+	-  locked java.util.Collections$UnmodifiableSet@6a408c4f
+	-  locked sun.nio.ch.WindowsSelectorImpl@4d1a71e0
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Netty Server IO #6" Id=110 RUNNABLE
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@189e9084
+	-  locked java.util.Collections$UnmodifiableSet@60bd9d48
+	-  locked sun.nio.ch.WindowsSelectorImpl@ef157e4
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Netty Server IO #5" Id=109 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@107aa2ab
+	-  locked java.util.Collections$UnmodifiableSet@7c8c1a90
+	-  locked sun.nio.ch.WindowsSelectorImpl@70d79f94
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"File IO Thread" Id=99 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.world.storage.ThreadedFileIOBase.func_75736_b(SourceFile:51)
+	at net.minecraft.world.storage.ThreadedFileIOBase.run(SourceFile:30)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Server Watchdog" Id=97 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(Unknown Source)
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:45)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #4" Id=96 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@749da81d
+	-  locked java.util.Collections$UnmodifiableSet@31b733df
+	-  locked sun.nio.ch.WindowsSelectorImpl@2df3f7e3
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Netty Server IO #3" Id=93 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@6114e6f6
+	-  locked java.util.Collections$UnmodifiableSet@78506789
+	-  locked sun.nio.ch.WindowsSelectorImpl@70f18a97
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"World Simulation Thread" Id=91 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at CoroUtil.world.WorldDirector.run(WorldDirector.java:430)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #2" Id=89 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@420f3785
+	-  locked java.util.Collections$UnmodifiableSet@46a4a64
+	-  locked sun.nio.ch.WindowsSelectorImpl@7ffd094f
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"threadDeathWatcher-2-1" Id=82 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at io.netty.util.ThreadDeathWatcher$Watcher.run(ThreadDeathWatcher.java:152)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Netty Server IO #1" Id=81 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@3248115
+	-  locked java.util.Collections$UnmodifiableSet@38ac3deb
+	-  locked sun.nio.ch.WindowsSelectorImpl@6ec379f0
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Netty Server IO #0" Id=80 RUNNABLE (in native)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+	at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@7963a216
+	-  locked java.util.Collections$UnmodifiableSet@5ee8b806
+	-  locked sun.nio.ch.WindowsSelectorImpl@7729555
+	at sun.nio.ch.SelectorImpl.select(Unknown Source)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732)
+	...
+
+
+"Keep-Alive-SocketCleaner" Id=69 WAITING on java.util.concurrent.locks.ReentrantLock$NonfairSync@d2fadaa owned by "Finalizer" Id=3
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.ReentrantLock$NonfairSync@d2fadaa
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(Unknown Source)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(Unknown Source)
+	at java.util.concurrent.locks.ReentrantLock.lock(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(Unknown Source)
+	...
+
+
+"D3D Screen Updater" Id=40 RUNNABLE (in native)
+	at sun.java2d.d3d.D3DRenderQueue.flushBuffer(Native Method)
+	at sun.java2d.d3d.D3DRenderQueue.flushBuffer(Unknown Source)
+	at sun.java2d.d3d.D3DRenderQueue.flushNow(Unknown Source)
+	at sun.java2d.d3d.D3DSurfaceData.swapBuffers(Unknown Source)
+	at sun.java2d.d3d.D3DScreenUpdateManager.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@1ee45967
+
+
+"Server console handler" Id=39 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	-  locked java.io.BufferedInputStream@37c3a4e9
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	-  locked java.io.InputStreamReader@415676d1
+	at java.io.InputStreamReader.read(Unknown Source)
+	...
+
+
+"DestroyJavaVM" Id=38 RUNNABLE
+
+
+"Server thread" Id=36 RUNNABLE
+	at com.google.common.collect.HashBiMap.seekByValue(HashBiMap.java:235)
+	at com.google.common.collect.HashBiMap.access$400(HashBiMap.java:58)
+	at com.google.common.collect.HashBiMap$Inverse.get(HashBiMap.java:573)
+	at net.minecraftforge.registries.ForgeRegistry.getID(ForgeRegistry.java:240)
+	at net.minecraftforge.registries.NamespacedWrapper.getIDForObject(NamespacedWrapper.java:95)
+	at net.minecraftforge.registries.NamespacedWrapper.func_148757_b(NamespacedWrapper.java:38)
+	at net.minecraft.world.biome.Biome.func_185362_a(Biome.java:115)
+	at net.minecraft.world.gen.layer.GenLayerBiomeEdge.func_75904_a(SourceFile:24)
+	...
+
+
+"TimerQueue" Id=34 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@d779996
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@d779996
+	at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+	at java.util.concurrent.DelayQueue.take(Unknown Source)
+	at javax.swing.TimerQueue.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@31e4d1ac
+
+
+"Thread-4" Id=33 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2739803d
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2739803d
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+	at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+	at com.mojang.util.QueueLogAppender.getNextLogEvent(QueueLogAppender.java:77)
+	at net.minecraft.server.gui.MinecraftServerGui$4.run(MinecraftServerGui.java:154)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"AWT-EventQueue-0" Id=32 WAITING on java.util.concurrent.locks.ReentrantLock$NonfairSync@1ee45967 owned by "D3D Screen Updater" Id=40
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.ReentrantLock$NonfairSync@1ee45967
+	at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(Unknown Source)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(Unknown Source)
+	at java.util.concurrent.locks.ReentrantLock$NonfairSync.lock(Unknown Source)
+	at java.util.concurrent.locks.ReentrantLock.lock(Unknown Source)
+	at sun.awt.SunToolkit.awtLock(Unknown Source)
+	...
+
+
+"AWT-Windows" Id=30 RUNNABLE
+	at sun.awt.windows.WToolkit.eventLoop(Native Method)
+	at sun.awt.windows.WToolkit.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"AWT-Shutdown" Id=29 WAITING on java.lang.Object@188c8c86
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.Object@188c8c86
+	at java.lang.Object.wait(Unknown Source)
+	at sun.awt.AWTAutoShutdown.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Java2D Disposer" Id=28 WAITING on java.lang.ref.ReferenceQueue$Lock@11f9d150
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@11f9d150
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at sun.java2d.Disposer.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+"Server Infinisleeper" Id=27 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:82)
+
+
+"Snooper Timer" Id=26 TIMED_WAITING on java.util.TaskQueue@7986f492
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@7986f492
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+
+"Thread-1" Id=25 WAITING on java.util.LinkedList@74c12308
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.LinkedList@74c12308
+	at java.lang.Object.wait(Unknown Source)
+	at com.zeitheron.hammercore.lib.zlib.utils.TaskedThread.run(TaskedThread.java:39)
+
+
+"Attach Listener" Id=5 RUNNABLE
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@199506b8
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@199506b8
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+	Number of locked synchronizers = 3
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@d2fadaa
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@8d569aa
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@57f94ab1
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@64b1bfe1
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@64b1bfe1
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference.tryHandlePending(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+
+
+Stacktrace:
+	at net.minecraft.server.dedicated.ServerHangWatchdog.run(ServerHangWatchdog.java:62)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_371, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 3491180008 bytes (3329 MB) / 4289200128 bytes (4090 MB) up to 4289200128 bytes (4090 MB)
+	JVM Flags: 2 total; -Xmx4G -Xms4G
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP 9.42 Powered by Forge 14.23.5.2859 132 mods loaded, 132 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                        | Version                         | Source                                             | Signature                                |
+	|:------ |:------------------------- |:------------------------------- |:-------------------------------------------------- |:---------------------------------------- |
+	| LCHIJA | minecraft                 | 1.12.2                          | minecraft.jar                                      | None                                     |
+	| LCHIJA | mcp                       | 9.42                            | minecraft.jar                                      | None                                     |
+	| LCHIJA | FML                       | 8.0.99.99                       | forge-1.12.2-14.23.5.2859.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | forge                     | 14.23.5.2859                    | forge-1.12.2-14.23.5.2859.jar                      | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | ivtoolkit                 | 1.3.3-1.12                      | minecraft.jar                                      | None                                     |
+	| LCHIJA | otgcore                   | 1.12.2-v9.4                     | minecraft.jar                                      | None                                     |
+	| LCHIJA | xaerominimap_core         | 1.12.2-1.0                      | minecraft.jar                                      | None                                     |
+	| LCHIJA | mixinbooter               | 7.1                             | minecraft.jar                                      | None                                     |
+	| LCHIJA | bnbgamingcore             | 0.12.0                          | minecraft.jar                                      | None                                     |
+	| LCHIJA | foamfixcore               | 7.7.4                           | minecraft.jar                                      | None                                     |
+	| LCHIJA | 113_water_mechanics       | 1.0.4                           | 1.13WaterMechanicsBackport-1.0.5-1.12.2.jar.jar    | None                                     |
+	| LCHIJA | movillages                | 1.5.4                           | [1.12]MoVillages-1.5.4.jar                         | None                                     |
+	| LCHIJA | advanced_vanilla          | 1.0.0                           | Advanced_Vanilla_1.0.jar                           | None                                     |
+	| LCHIJA | aether_legacy             | 1.5.3.2                         | aether-1.12.2-v1.5.3.2.jar                         | None                                     |
+	| LCHIJA | aiimprovements            | 0.0.1.3                         | AIImprovements-1.12-0.0.1b3.jar                    | None                                     |
+	| LCHIJA | airhop                    | 1.1.2                           | AirHop-v1.2-1.12.2.jar                             | None                                     |
+	| LCHIJA | biomesoplenty             | 7.0.1.2445                      | BiomesOPlenty-1.12.2-7.0.1.2445-universal.jar      | None                                     |
+	| LCHIJA | redstoneflux              | 2.1.1                           | RedstoneFlux-1.12-2.1.1.1-universal.jar            | None                                     |
+	| LCHIJA | cofhcore                  | 4.6.6                           | CoFHCore-1.12.2-4.6.6.1-universal.jar              | None                                     |
+	| LCHIJA | craftstudioapi            | 1.0.0                           | CraftStudioAPI-universal-1.0.1.95-mc1.12-alpha.jar | None                                     |
+	| LCHIJA | openterraingenerator      | v9.4                            | OpenTerrainGenerator-1.12.2-v9.5.jar               | None                                     |
+	| LCHIJA | animania                  | 2.0.3.28                        | animania-1.12.2-base-2.0.3.28.jar                  | None                                     |
+	| LCHIJA | aquaacrobatics            | 1.15.3                          | AquaAcrobatics-1.15.3.jar                          | None                                     |
+	| LCHIJA | aqua_creepers             | 1.2.3                           | AquaCreepers-1.2.3.jar                             | None                                     |
+	| LCHIJA | jei                       | 4.16.1.301                      | jei_1.12.2-4.16.1.301.jar                          | None                                     |
+	| LCHIJA | quark                     | r1.6-179                        | Quark-r1.6-179.jar                                 | None                                     |
+	| LCHIJA | autoreglib                | 1.3-32                          | AutoRegLib-1.3-32.jar                              | None                                     |
+	| LCHIJA | backportedflora           | 1.7                             | backportedflora-1.7.jar                            | None                                     |
+	| LCHIJA | miscrails                 | 1.0.0                           | Better-Railroads-1.0.0.jar                         | None                                     |
+	| LCHIJA | betterburning             | 0.9.2                           | BetterBurning-1.12.2-0.9.2.jar                     | d476d1b22b218a10d845928d1665d45fce301b27 |
+	| LCHIJA | bettercaves               | 1.12.2                          | bettercaves-1.12.2-2.0.4.jar                       | None                                     |
+	| LCHIJA | bettercombatmod           | 1.5.6                           | BetterCombat-1.12.2-1.5.6.jar                      | None                                     |
+	| LCHIJA | bettercrates              | 1.2.0                           | BetterCrates-1.2.0.jar                             | None                                     |
+	| LCHIJA | betterfurnacesreforged    | 1.5.5                           | BetterFurnacesReforged-1.12.2-1.5.5.jar            | None                                     |
+	| LCHIJA | bettermineshafts          | 1.12.2-2.2.1                    | BetterMineshaftsForge-1.12.2-2.2.1.jar             | None                                     |
+	| LCHIJA | bettermobgriefinggamerule | 1.12.2-7.1.0                    | bettermobgriefinggamerule-1.12.2-7.1.0.jar         | None                                     |
+	| LCHIJA | betterteleport            | 1.0                             | betterteleport-1.0.jar                             | None                                     |
+	| LCHIJA | betterthanmending         | 1.1.2                           | BetterThanMending-1.1.2.jar                        | None                                     |
+	| LCHIJA | betterthirdperson         | 1.9.0                           | BetterThirdPerson-Forge-1.12.2-1.9.0.jar           | None                                     |
+	| LCHIJA | bloodmoon                 | 1.5.3                           | Bloodmoon-MC1.12.2-1.5.3.jar                       | d72e0dd57935b3e9476212aea0c0df352dd76291 |
+	| LCHIJA | modularui                 | 2.0.4                           | modularui-2.0.4.jar                                | None                                     |
+	| LCHIJA | bogosorter                | 1.2.7                           | bogosorter-1.2.7.jar                               | None                                     |
+	| LCHIJA | borntobe                  | @VERSION@                       | borntobe-1.12.2-1.0.jar                            | None                                     |
+	| LCHIJA | forgelin                  | 1.8.4                           | Forgelin-1.8.4.jar                                 | None                                     |
+	| LCHIJA | bountiful                 | 2.2.2                           | Bountiful-2.2.2.jar                                | None                                     |
+	| LCHIJA | carryon                   | 1.12.3                          | carryon-1.12.2-1.12.7.23.jar                       | None                                     |
+	| LCHIJA | caves_and_cliffs          | 1.0.9                           | CC(FG1.12.2) 1.0.9.jar                             | None                                     |
+	| LCHIJA | ceanimals                 | 1.4.1                           | ceanimals-1.12.2-1.4.1.jar                         | None                                     |
+	| LCHIJA | chunkpregenerator         | 2.5.0                           | Chunk Pregenerator-V1.12-2.5.7.jar                 | None                                     |
+	| LCHIJA | chunkgenlimit             | 1.1                             | chunkgenlimiter-1.1.jar                            | None                                     |
+	| LCHIJA | clearwater                | 1.2                             | clearwater-1.2.jar                                 | None                                     |
+	| LCHIJA | coherentvillages          | v0.0.5.10                       | coherent_villages-pre-release_v0.0.5.10.jar        | None                                     |
+	| LCHIJA | collective                | 3.0                             | collective-1.12.2-3.0.jar                          | None                                     |
+	| LCHIJA | comforts                  | 1.4.1.2                         | comforts-1.12.2-1.4.1.2.jar                        | 5d5b8aee896a4f5ea3f3114784742662a67ad32f |
+	| LCHIJA | extendedrenderer          | v1.0                            | coroutil-1.12.1-1.2.37.jar                         | None                                     |
+	| LCHIJA | coroutil                  | 1.12.1-1.2.37                   | coroutil-1.12.1-1.2.37.jar                         | None                                     |
+	| LCHIJA | configmod                 | v1.0                            | coroutil-1.12.1-1.2.37.jar                         | None                                     |
+	| LCHIJA | chickenshedcontinued      | 1.0                             | CSC-1.12-1.0.jar                                   | None                                     |
+	| LCHIJA | cmt                       | 12.1.0                          | CustomMobTargets-1.12.2-12.1.0.jar                 | 9f5e2a811a8332a842b34f6967b7db0ac4f24856 |
+	| LCHIJA | deathfinder               | 1.0.1                           | DeathFinder-v1.0.1-1.12.2.jar                      | 12d137bcc36051a1c2c8ea7211cfc1da1c6e9dea |
+	| LCHIJA | durability101             | 0.0.4                           | Durability101-forge-1.12-0.0.4.jar                 | None                                     |
+	| LCHIJA | orelib                    | 3.6.0.1                         | OreLib-1.12.2-3.6.0.1.jar                          | 7a2128d395ad96ceb9d9030fbd41d035b435753a |
+	| LCHIJA | dsurround                 | 3.6.1.0                         | DynamicSurroundings-1.12.2-3.6.1.0.jar             | 7a2128d395ad96ceb9d9030fbd41d035b435753a |
+	| LCHIJA | reccomplex                | 1.4.8.4                         | RecurrentComplex-1.4.8.4.jar                       | None                                     |
+	| LCHIJA | dynamictrees              | 1.12.2-0.9.29                   | DynamicTrees-1.12.2-0.9.29.jar                     | None                                     |
+	| LCHIJA | dynamictreesbop           | 1.12.2-1.5.1                    | DynamicTreesBOP-1.12.2-1.5.1.jar                   | None                                     |
+	| LCHIJA | dynamictreesquark         | 1.12.2-1.0.6                    | DynamicTreesQuark-1.12.2-1.0.6.jar                 | None                                     |
+	| LCHIJA | editmobdrops              | 1.4.3                           | editmobdrops-1.12.2-1.4.3.jar                      | None                                     |
+	| LCHIJA | esrainplants              | 1.5.1                           | Farming in Rain - 1.12.2 - 1.5.1.jar               | None                                     |
+	| LCHIJA | farseek                   | 2.5.1                           | Farseek-1.12-2.5.1.jar                             | None                                     |
+	| LCHIJA | foamfix                   | @VERSION@                       | foamfix-0.10.15-1.12.2.jar                         | None                                     |
+	| LCHIJA | friendlyfire              | 1.5.10                          | FriendlyFire-1.12.2-1.5.10.jar                     | d476d1b22b218a10d845928d1665d45fce301b27 |
+	| LCHIJA | futuremc                  | 0.2.6                           | future-mc-0.2.11.jar                               | None                                     |
+	| LCHIJA | grandeconomy              | 2.1.2                           | GrandEconomy-1.12.2-2.1.2.jar                      | None                                     |
+	| LCHIJA | gravelminer               | 6.1.2                           | GravelMiner_1.12.1-6.1.2.jar                       | None                                     |
+	| LCHIJA | hammercore                | 2.0.6.32                        | HammerLib-1.12.2-2.0.6.32.jar                      | 9f5e2a811a8332a842b34f6967b7db0ac4f24856 |
+	| LCHIJA | hardcorebuoy              | ${version}                      | HardcoreBuoy-1.12-1.1.0.jar                        | None                                     |
+	| LCHIJA | hitindication             | 1.1.3                           | hitindication-1.12.2-1.1.3.jar                     | None                                     |
+	| LCHIJA | ichunutil                 | 7.2.2                           | iChunUtil-1.12.2-7.2.2.jar                         | 4db5c2bd1b556f252a5b8b54b256d381b2a0a6b8 |
+	| LCHIJA | intwheel                  | 1.2.7                           | intwheel-1.12-1.2.7.jar                            | None                                     |
+	| LCHIJA | jeri                      | Just Enough Recipe Integrations | JERI-1.12.2-1.1.1.jar                              | None                                     |
+	| LCHIJA | mcwbridges                | 1.0.6                           | mcw-bridges-1.0.6b-mc1.12.2.jar                    | None                                     |
+	| LCHIJA | mozombies_wave            | 0.1.5                           | Mo'ZombiesWave-1.12.2-0.1.5.jar                    | None                                     |
+	| LCHIJA | mobcontroller             | 1.1                             | MobController-1.12.2-1.1.jar                       | None                                     |
+	| LCHIJA | omm                       | 1.3                             | MobDropStorageBlocks-1.3.jar                       | None                                     |
+	| LCHIJA | mobends                   | 1.2.1                           | MoBends_1.12.2-1.2.1-19.12.21.jar                  | None                                     |
+	| LCHIJA | modiscs                   | 1.0.0                           | modiscs.jar                                        | None                                     |
+	| LCHIJA | more_mob_drops            | 1.0.0                           | MoreMobDrops1.12.2-1.0.0.jar                       | None                                     |
+	| LCHIJA | multimob                  | 1.0.5                           | multimob-1.0.5.jar                                 | None                                     |
+	| LCHIJA | netherchest               | 1.1.1                           | netherchest-1.1.1.jar                              | None                                     |
+	| LCHIJA | netherportalfix           | 5.3.17                          | NetherPortalFix_1.12.1-5.3.17.jar                  | None                                     |
+	| LCHIJA | netherbackport            | 1.0.0                           | NetherUpdateBackport-1.12.2(1.0.1).jar             | None                                     |
+	| LCHIJA | nmsot                     | 1.2.2-mc1.12.2                  | NoMobSpawningOnTrees-1.2.2-mc1.12.2.jar            | None                                     |
+	| LCHIJA | oe                        | 1.0.5                           | OceanicExpanse-1.0.5.jar                           | None                                     |
+	| LCHIJA | parry                     | 1.0                             | parry-1.0-hotfix.jar                               | None                                     |
+	| LCHIJA | placebo                   | 1.6.0                           | Placebo-1.12.2-1.6.0.jar                           | None                                     |
+	| LCHIJA | prettybeaches             | 1.1.0                           | PrettyBeaches_1.12.2-1.1.0.jar                     | None                                     |
+	| LCHIJA | primitivemobs             | 1.2.3a                          | primitivemobs-1.2.3a.jar                           | None                                     |
+	| LCHIJA | progressiveautomation     | 1.7.8                           | ProgressiveAutomation-1.12.2-1.7.8.jar             | None                                     |
+	| LCHIJA | progressivebosses         | 1.5.4                           | ProgressiveBosses-1.5.4-mc1.12.x.jar               | None                                     |
+	| LCHIJA | rangedpumps               | 0.5                             | rangedpumps-0.5.jar                                | None                                     |
+	| LCHIJA | additionalstructures      | 2.5.0                           | Rex's-AdditionalStructures-1.12.x(v.2.5.0).jar     | None                                     |
+	| LCHIJA | roguelike                 | 2.4.4                           | RoguelikeDungeonsFnarEdition-1.12.2-2.4.4.jar      | None                                     |
+	| LCHIJA | ruins                     | 17.2                            | Ruins-1.12.2.jar                                   | None                                     |
+	| LCHIJA | satako                    | 2.26                            | Satako 1.12-2.26.jar                               | None                                     |
+	| LCHIJA | scaffolding               | 1.11-RB1                        | scaffolding-1.0(1.12).jar                          | None                                     |
+	| LCHIJA | somanyenchantments        | 0.5.5                           | SoManyEnchantments-0.5.5.jar                       | None                                     |
+	| LCHIJA | specialai                 | 1.1.0_for_mc1.12.2              | specialai-1.1.0_for_mc1.12.2.jar                   | None                                     |
+	| LCHIJA | stg                       | 1.12.2-1.2.3                    | stg-1.12.2-1.2.3.jar                               | None                                     |
+	| LCHIJA | streams                   | 0.4.9                           | Streams-1.12-0.4.9.jar                             | None                                     |
+	| LCHIJA | strongfarmland            | 1.12.2-1.0.0                    | strongfarmland-1.12.2-1.0.0.jar                    | 0e5cb559be7d03f3fc18b8cba547d663e25f28af |
+	| LCHIJA | stygian                   | 1.0.4                           | stygian-1.0.4.jar                                  | None                                     |
+	| LCHIJA | switchbow                 | 1.6.8                           | switchbow-1.6.8.jar                                | None                                     |
+	| LCHIJA | teleportingxp             | 1.1.1.1                         | teleportingxp-1.1.1.1.jar                          | None                                     |
+	| LCHIJA | ultimate_unicorn_mod      | 1.5.17                          | ultimate_unicorn_mod-1.12.2-1.5.17.jar             | None                                     |
+	| LCHIJA | vanillavistas             | 1.0                             | Vanilla_Vistas 1.1.jar                             | None                                     |
+	| LCHIJA | vanillasatchels           | 1.0.2                           | VanillaSatchels-1.12.2-1.0.2.4-universal.jar       | 8a6abf2cb9e141b866580d369ba6548732eff25f |
+	| LCHIJA | vanillatech               | 22r                             | VanillaTech_1.12.2-22r.jar                         | None                                     |
+	| LCHIJA | vanillatools              | 1.1.0                           | VanillaTools-1.12.2-1.1.0.2-universal.jar          | 8a6abf2cb9e141b866580d369ba6548732eff25f |
+	| LCHIJA | veinminer                 | 0.38.2                          | VeinMiner-1.12-0.38.2.647+b31535a.jar              | None                                     |
+	| LCHIJA | veinminermodsupport       | 0.38.2                          | VeinMiner-1.12-0.38.2.647+b31535a.jar              | None                                     |
+	| LCHIJA | villagenames              | 4.4.6                           | VillageNames-1.12.2-4.4.6.jar                      | None                                     |
+	| LCHIJA | idk                       | 1.0.0                           | VPPVu4.jar                                         | None                                     |
+	| LCHIJA | waystones                 | 4.1.0                           | Waystones_1.12.2-4.1.0.jar                         | None                                     |
+	| LCHIJA | xaerominimap              | 23.4.2                          | Xaeros_Minimap_23.4.2_Forge_1.12.jar               | None                                     |
+	| LCHIJA | w2w                       | 1.2.1                           | w2w-1.2.1.jar                                      | None                                     |
+	| LCHIJA | water-erosion             | 1.1.1-beta1                     | water-erosion-1.12.2-forge-1.1.1-beta1-full.jar    | None                                     |
+	| LCHIJA | weather2                  | 1.12.1-2.6.12                   | weather2-1.12.1-2.6.12.jar                         | None                                     |
+	| LCHIJA | witherskelefix            | 2.6.3                           | WitherSkeletonTweaks-1.12.2-2.6.3.jar              | None                                     |
+	| LCHIJA | xpfromharvest             | 1.2.0                           | XPFromHarvest-1.12.2-1.2.0.jar                     | None                                     |
+	| LCHIJA | betterdisplays            | 1.12.2-1.1.1                    | BetterDisplays-1.12.2-1.1.1.jar                    | None                                     |
+	| LCHIJA | supertools                | 1.12.2-null                     | VanillaPlusTools-1.2.jar                           | None                                     |
+
+	Loaded coremods (and transformers): 
+CustomMobTargetsCoremod (CustomMobTargets-1.12.2-12.1.0.jar)
+  org.zeith.cmt.asm.CustomMobTargetsCoremod
+LoadingPlugin (ChunkAnimator-1.12.2-1.2.1.jar)
+  lumien.chunkanimator.asm.ClassTransformer
+Aqua Acrobatics Transformer (AquaAcrobatics-1.15.3.jar)
+  
+OTGCorePlugin (OTG-Core.jar)
+  com.pg85.otg.forge.asm.excluded.OTGClassTransformer
+Quark Plugin (Quark-r1.6-179.jar)
+  vazkii.quark.base.asm.ClassTransformer
+LoadingPlugin (Bloodmoon-MC1.12.2-1.5.3.jar)
+  lumien.bloodmoon.asm.ClassTransformer
+ChunkGenLimiterCoremod (chunkgenlimiter-1.1-core.jar)
+  io.github.barteks2x.chunkgenlimiter.coremod.ChunkGenLimitTransformer
+XaeroMinimapPlugin (Xaeros_Minimap_23.4.2_Forge_1.12.jar)
+  xaero.common.core.transformer.ChunkTransformer
+  xaero.common.core.transformer.NetHandlerPlayClientTransformer
+  xaero.common.core.transformer.EntityPlayerTransformer
+  xaero.common.core.transformer.AbstractClientPlayerTransformer
+  xaero.common.core.transformer.WorldClientTransformer
+  xaero.common.core.transformer.EntityPlayerSPTransformer
+  xaero.common.core.transformer.PlayerListTransformer
+  xaero.common.core.transformer.SaveFormatTransformer
+  xaero.common.core.transformer.GuiIngameForgeTransformer
+  xaero.common.core.transformer.GuiBossOverlayTransformer
+  xaero.common.core.transformer.ModelRendererTransformer
+IvToolkit (IvToolkit-1.3.3-1.12.jar)
+  
+MixinBooter (!mixinbooter-7.1.jar)
+  
+TransformLoader (DynamicSurroundings-1.12.2-3.6.1.0.jar)
+  
+ModularUI-Core (modularui-2.0.4.jar)
+  
+RBLoadingPlugin (RealBench-1.12.2-1.3.3.jar)
+  pw.prok.realbench.asm.RBTransformer
+Do not report to Forge! (If you haven't disabled the FoamFix coremod, try disabling it in the config! Note that this bit of text will still appear.) (foamfix-0.10.15-1.12.2.jar)
+  pl.asie.foamfix.coremod.FoamFixTransformer
+SoManyEnchantments ASM (SoManyEnchantments-0.5.5.jar)
+  com.Shultrea.Rin.Transformer.SMEASM
+ForgelinPlugin (Forgelin-1.8.4.jar)
+  
+FutureMC (future-mc-0.2.11.jar)
+  thedarkcolour.futuremc.asm.CoreTransformer
+MixinLoader (water-erosion-1.12.2-forge-1.1.1-beta1-full.jar)
+  
+BogoSorter-Core (bogosorter-1.2.7.jar)
+  
+FarseekCoreMod (Farseek-1.12-2.5.1.jar)
+  farseek.core.FarseekClassTransformer
+Born in a Barn (Born In A Barn V1.8-1.12-1.1.jar)
+  com.chocohead.biab.BornInABarn
+BNBGamingCore (BNBGamingCore-1.12.2-0.12.0.jar)
+  com.bloodnbonesgaming.bnbgamingcore.core.BNBGamingCoreClassTransformer
+HCASM (HammerLib-1.12.2-2.0.6.32.jar)
+  com.zeitheron.hammercore.asm.HammerCoreTransformer
+BetterFoliageLoader (BetterFoliage-MC1.12-2.3.3.jar)
+  mods.betterfoliage.loader.BetterFoliageTransformer
+LoadingPlugin (HardcoreBuoy-1.12-1.1.0.jar)
+  betterwithmods.core.ClassTransformer
+	HammerCore Debug Information: 
+		Dependent Mods:
+			-Vanilla Tech (vanillatech) @ 22r
+
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [EntityPlayerMP['CrimsonTrooper64'/286, l='world', x=842.88, y=97.83, z=-305.18]]
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
