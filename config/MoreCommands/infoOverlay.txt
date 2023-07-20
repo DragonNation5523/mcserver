@@ -1,0 +1,10 @@
+§6Player: §e{playerName}
+§6FPS: §e{fps}
+§6X: §e{x}
+§6Y: §e{y}
+§6Z: §e{z}
+§6Yaw: §e{yaw}
+§6Pitch: §e{pitch}
+§6Facing: §e{facing}
+§6Biome: §e{biome}
+§6Blocks/sec: §e{blocksPerSec}
